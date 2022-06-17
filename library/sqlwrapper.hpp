@@ -96,12 +96,12 @@ namespace SQLWrap
 
         std::string charType(size_t size)
         {
-            return "VARCHAR(" + std::to_string(size) + ')';
+            return "CHAR(" + std::to_string(size) + ')';
         }
 
         std::string varchar(size_t size)
         {
-            return "CHAR(" + std::to_string(size) + ')';
+            return "VARCHAR(" + std::to_string(size) + ')';
         }
 
         const char *text = "TEXT";
@@ -337,12 +337,6 @@ namespace SQLWrap
 
         void dropTable();
     };
-
-    template <class fieldName>
-    void referenceTables(Table table1, fieldName field1, Table table2, fieldName field2)
-    {
-        std::stringstream stream;
-    }
 };
 
 template <class fieldName, class fieldType, class... Args, class... Fields>
